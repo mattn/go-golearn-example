@@ -14,9 +14,9 @@ func main() {
 		log.Fatal(err)
 	}
 
-	net := neural.NewMultiLayerNet([]int{3})
-	net.MaxIterations = 20000
-	net.Fit(data)
-	pred := net.Predict(data)
+	nn := neural.NewMultiLayerNet([]int{3})
+	nn.MaxIterations = 20000
+	nn.Fit(data)
+	pred := nn.Predict(data)
 	fmt.Println(pred)
 }
